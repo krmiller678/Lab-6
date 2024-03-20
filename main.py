@@ -28,7 +28,7 @@ def encode(passcode):
 
 def decode(passcode):
     """
-    CJ - Write your method description here -
+    Write your method description here
     :param passcode:
     :return: encoded_passcode
     """
