@@ -28,12 +28,15 @@ def encode(passcode):
 
 def decode(passcode):
     """
-    Write your method description here
+    Decoder that adds 3 to each digit, while taking modulo 10 to keep within single digits
     :param passcode:
     :return: encoded_passcode
     """
-    #Add decoder code here then push to repository with comment added decode function
-    pass
+    decoded = ""
+    for digit in passcode:
+        decoded += str((int(digit) - 3) % 10)
+    return decoded
+
 
 def main():
 
@@ -54,7 +57,7 @@ def main():
             print("Your password has been encoded and stored!")
             print()
 
-        elif user_input == 2:
+        elif user_input == "2":
             decoded = decode(encoded)
             print(f"The encoded password is {encoded}, and the original password is {decoded}.")
 
